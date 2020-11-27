@@ -1,8 +1,9 @@
 # Animatie-oefening
-**Dingen geleerd:|
-justify-constent: center;|
-.classList.toggle();|
-setTimeout();|
+**Dingen geleerd:
+
+1- justify-constent: center;
+2- .classList.toggle();
+3- setTimeout();
 
 
 
