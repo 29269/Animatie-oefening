@@ -36,7 +36,7 @@ margin-bottom: .05em;
     text-decoration: none;
     display: block;
     padding: .2em .5em ;
-    transform: translateX(-8.8em);
+    transform: translateX(-8.4em);
     transition: transform .8s ease-in-out;
 }
 .nav__link--schuif-in{
