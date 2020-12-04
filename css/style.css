@@ -28,14 +28,14 @@ nav{
     color: palevioletred;
 }
 .nav__item{
-margin-bottom: .05em;
+margin-top: .05em;
 }
 .nav__link {
     color: palevioletred;
     background-color: seashell;
     text-decoration: none;
     display: block;
-    padding: .2em .5em ;
+    padding: .45em .7em ;
     transform: translateX(-8.4em);
     transition: transform .8s ease-in-out;
 }
@@ -45,7 +45,48 @@ margin-bottom: .05em;
 .nav__link:hover{
     background-color: pink;
 }
+/*verfijning van de animatie door de tekst van de link na te laten animeren*/
+.nav__link--schuif-in .nav__tekst{
+   animation: ijl-na 1s forwards;
+}
+@keyframes ijl-na {
+    0% {transform: translateX(-2em);}
+    50% {transform: translateX(0.6em);}
+    75% {transform: translateX(-0.3em);}
+    100% {transform: translateX(0em);}
+}
+/*mediaquerie voor nav*/
+@media screen and (min-width: 606px){
+    .nav{
+        flex-direction: row;
+        width: 100vw;
+        height: 7vh;
+    }
+    .nav__link{
+        transform: translateY(-2.5em);
+    }
+    .nav__link--schuif-in{
+        transform: translateY(0);
+    }
+    .nav__item{
+        margin-left: .1em;
+        margin-top: 0;
+        flex: 1 0 auto;
+        ;
+    }
+    /*verfijning van de animatie door de tekst van de link na te laten animeren verticaal*/
+    .nav__link--schuif-in .nav__tekst{
+        animation: ijl-na-vert 1s forwards;
+    }
+    @keyframes ijl-na-vert {
+        0% {transform: translateY(-1.8em);}
+        50% {transform: translateY(0.19em);}
+        75% {transform: translateY(-0.26em);}
+        100% {transform: translateY(0em);}
+    }
+}
 main{
+
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -63,5 +104,17 @@ main{
     transform:  translateX(60vw) rotate(99deg);
 }
 .animeer-knop{
-    height: 2.5em;
+    padding: 1em;
+    border: none;
+    color: palevioletred;
+    background: seashell;
+}
+.animeer-knop:hover{
+    font-size: 15px;
+    background: pink;
+    color: seashell;
+}
+/*de sluiting van de menu*/
+.fas.verberg{
+    display: none;
 }
